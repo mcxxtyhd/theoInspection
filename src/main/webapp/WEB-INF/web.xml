@@ -24,7 +24,7 @@
 	<!-- spring配置文件位置 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:resources/spring.xml,classpath*:resources/spring-hibernate.xml</param-value>
+		<param-value>/WEB-INF/classes/spring.xml,/WEB-INF/classes/spring-hibernate.xml</param-value>
 	</context-param>
 	
 	<!-- 字符集编码配置 -->
@@ -92,7 +92,7 @@
 	</session-config>
 	
   <welcome-file-list>
-    <welcome-file>/main/webapp/webpage/login/login.jsp</welcome-file>
+    <welcome-file>webpage/login/theoStart.jsp</welcome-file>
   </welcome-file-list>
   
 
