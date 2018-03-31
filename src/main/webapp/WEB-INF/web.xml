@@ -92,7 +92,7 @@
 	</session-config>
 	
   <welcome-file-list>
-    <welcome-file>webpage/login/theoStart.jsp</welcome-file>
+    <welcome-file>webpage/login/testSubmit.jsp</welcome-file>
   </welcome-file-list>
   
 

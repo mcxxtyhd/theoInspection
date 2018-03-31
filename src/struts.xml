@@ -23,7 +23,7 @@
 	
 	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
 	 <!-- 扫描包的路径 -->
-	<constant name="struts.convention.action.packages" value="com.inspect.action"/>
+	<constant name="struts.convention.action.packages" value="com.theo.action"/>
 	<constant name="struts.convention.package.locators.disable" value="true"/>
 	<constant name="struts.convention.default.parent.package" value="default"/>
 	<constant name="struts.custom.i18n.resources" value="i18n/globalMessages" />
@@ -32,14 +32,14 @@
 	
 	 <interceptors>
 	   <!-- 字符集拦截器 -->
-	   <interceptor name="encodingInterceptor" class="com.inspect.interceptor.EncodingInterceptor"></interceptor>
+	   <interceptor name="encodingInterceptor" class="com.theo.interceptor.EncodingInterceptor"></interceptor>
 	   <interceptor-stack name="encodingStack">
 	    <interceptor-ref name="defaultStack"></interceptor-ref>
 	    <interceptor-ref name="encodingInterceptor"></interceptor-ref>
 	   </interceptor-stack>
 	   
 	    <!-- Session拦截器 -->
-	   <interceptor name="sessionInterceptor" class="com.inspect.interceptor.SessionInterceptor"></interceptor>
+	   <interceptor name="sessionInterceptor" class="com.theo.interceptor.SessionInterceptor"></interceptor>
 	   <interceptor-stack name="sessionStack">
 	    <interceptor-ref name="encodingStack"></interceptor-ref>
 	    <interceptor-ref name="sessionInterceptor">
@@ -48,7 +48,7 @@
 	   </interceptor-stack> 
 	   
 	    <!-- 日志拦截器 -->
-	   <interceptor name="logInterceptor" class="com.inspect.interceptor.LogInterceptor"></interceptor>
+	   <interceptor name="logInterceptor" class="com.theo.interceptor.LogInterceptor"></interceptor>
 	   <interceptor-stack name="myDefaultStack">
 	    <interceptor-ref name="sessionStack"></interceptor-ref>
 	    <interceptor-ref name="logInterceptor"></interceptor-ref>
@@ -81,7 +81,7 @@
     <constant name="struts.multipart.maxSize" value="22097152"/>
     <constant name="struts.multipart.saveDir " value="d:/tmp"/>
     <package name="upload" namespace="/upload" extends="struts-default">
-        <action name="execute" class="com.inspect.action.webservice.UploadAction">
+        <action name="execute" class="com.theo.action.webservice.UploadAction">
             <param name="savePath">/image</param>
             <result name="success">/WEB-INF/page/message.jsp</result>
         </action>
@@ -90,13 +90,13 @@
    <!--  <constant name="struts.multipart.parser" value=""/>  -->
 
        <package name="struts2"  namespace="/UploadAction2" extends="struts-default">  
-         <action name="UploadAction2" class="com.inspect.action.webservice.UploadAction2">  
+         <action name="UploadAction2" class="com.theo.action.webservice.UploadAction2">  
              <result name="success1"> /formsList.jsp</result>  
          </action>  
     </package>  
 
     	<package name="struts21" extends="struts-default">
-		<action name="FileDownload" class="com.inspect.action.basis.FileDownload">
+		<action name="FileDownload" class="com.theo.action.basis.FileDownload">
 			<!-- result的Type必须为stream -->
 			<result name="success" type="stream">
 				<!-- 下载文件类型 -->

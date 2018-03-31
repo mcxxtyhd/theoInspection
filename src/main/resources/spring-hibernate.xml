@@ -15,7 +15,7 @@
 	
 
 <!-- 自动扫描dao和service包(自动注入) -->
-	<context:component-scan base-package="com.inspect">
+	<context:component-scan base-package="com.theo">
 	    <context:include-filter type="regex" expression=".dao..*"/>
 		<context:include-filter type="regex" expression=".service..*"/>
 		<context:include-filter type="regex" expression=".action..*"/>
@@ -82,12 +82,13 @@
 		<!-- 自动扫描注解方式配置的hibernate类文件 -->
 		<property name="packagesToScan">
 			<list>
+				<value>com.theo.model.system</value>
 				<!-- 
-				<value>com.inspect.model.basis</value>
-				<value>com.inspect.model.system</value>
-				<value>com.inspect.model.monitor</value>
-				<value>com.inspect.model.problem</value>
-				<value>com.inspect.model.baseinfo</value> 
+				<value>com.theo.model.basis</value>
+				<value>com.theo.model.system</value>
+				<value>com.theo.model.monitor</value>
+				<value>com.theo.model.problem</value>
+				<value>com.theo.model.baseinfo</value> 
 				-->
 			</list>
 		</property>

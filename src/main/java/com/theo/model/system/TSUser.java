@@ -24,7 +24,6 @@ public class TSUser extends BaseModel implements Serializable{
 	private String email;    //用户邮箱
 	private String udesc;    //用户描述
 	public TSUser() {
-		super();
 	}
 	public String getUsername() {
 		return username;
